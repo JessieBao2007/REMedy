@@ -64,16 +64,17 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/blue_btn_background">
 
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="88dp"
-                            android:layout_height="94dp"
+                        <Button
+                            android:id="@+id/ChallengeButton"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:layout_margin="8dp"
+                            android:background="@drawable/purple_circle"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/purple_circle" />
+                            app:layout_constraintTop_toTopOf="parent" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
@@ -96,17 +97,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/blue_btn_background">
-                        
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="88dp"
-                            android:layout_height="94dp"
+
+
+                        <Button
+                            android:id="@+id/LeaderboardButton"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:layout_margin="8dp"
+                            android:background="@drawable/purple_circle"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/purple_circle" />
+                            app:layout_constraintTop_toTopOf="parent" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
@@ -130,16 +133,17 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/blue_btn_background">
 
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="88dp"
-                            android:layout_height="94dp"
+                        <Button
+                            android:id="@+id/TrackerButton"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:layout_margin="8dp"
+                            android:background="@drawable/purple_circle"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/purple_circle" />
+                            app:layout_constraintTop_toTopOf="parent" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
@@ -170,16 +174,16 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/blue_btn_background">
 
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="88dp"
-                            android:layout_height="94dp"
+                        <Button
+                            android:id="@+id/EnvironmentButton"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:layout_margin="8dp"
+                            android:background="@drawable/purple_circle"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/purple_circle" />
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
@@ -203,16 +207,17 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/blue_btn_background">
 
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="88dp"
-                            android:layout_height="94dp"
+                        <Button
+                            android:id="@+id/SoundscapesButton"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:layout_margin="8dp"
+                            android:background="@drawable/purple_circle"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/purple_circle" />
+                            app:layout_constraintTop_toTopOf="parent" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
@@ -236,16 +241,17 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/blue_btn_background">
 
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="88dp"
-                            android:layout_height="94dp"
+                        <Button
+                            android:id="@+id/TipsButton"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
                             android:layout_margin="8dp"
+                            android:background="@drawable/purple_circle"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/purple_circle" />
+                            app:layout_constraintTop_toTopOf="parent" />
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
