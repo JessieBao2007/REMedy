@@ -35,6 +35,8 @@ public class environment_activity extends AppCompatActivity {
     CheckBox Q5O2;
     CheckBox Q5O3;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
