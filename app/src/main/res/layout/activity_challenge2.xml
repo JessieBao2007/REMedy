@@ -18,7 +18,8 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/poppins_bold"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -69,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="20dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/challenge_elements_bg"
                 android:backgroundTint="#C7ECE9">
 
@@ -86,7 +87,8 @@
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.076" />
+                    app:layout_constraintVertical_bias="0.076"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -94,6 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Hydration Challenge"
                     android:textColor="#13173A"
                     android:textSize="20sp"
@@ -110,29 +113,18 @@
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="375dp"
-                android:layout_height="180dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/challenge_elements_bg"
                 android:backgroundTint="#C7ECE9">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="25dp"
-                    android:text="Caffeine Cut-Off"
-                    android:textColor="#13173A"
-                    android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -147,7 +139,22 @@
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.076" />
+                    app:layout_constraintVertical_bias="0.076"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Caffeine Cut-Off"
+                    android:textColor="#13173A"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/button3"
@@ -158,7 +165,8 @@
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -180,7 +188,8 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/poppins_semibold"/>
 
                 <TextView
                     android:id="@+id/textView4"
@@ -195,7 +204,8 @@
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.076" />
+                    app:layout_constraintVertical_bias="0.076"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <Button
                     android:id="@+id/button3"
@@ -206,7 +216,8 @@
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -228,7 +239,8 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/poppins_semibold"/>
 
                 <TextView
                     android:id="@+id/textView4"
@@ -243,7 +255,8 @@
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.076" />
+                    app:layout_constraintVertical_bias="0.076"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <Button
                     android:id="@+id/button3"
@@ -254,7 +267,8 @@
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -276,7 +290,8 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/poppins_semibold"/>
 
                 <TextView
                     android:id="@+id/textView4"
@@ -291,7 +306,8 @@
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.076" />
+                    app:layout_constraintVertical_bias="0.076"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <Button
                     android:id="@+id/button3"
@@ -302,7 +318,8 @@
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -324,7 +341,8 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/poppins_semibold"/>
 
                 <TextView
                     android:id="@+id/textView4"
@@ -339,7 +357,8 @@
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.076" />
+                    app:layout_constraintVertical_bias="0.076"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <Button
                     android:id="@+id/button3"
@@ -350,7 +369,8 @@
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -372,7 +392,8 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/poppins_semibold"/>
 
                 <TextView
                     android:id="@+id/textView4"
@@ -387,7 +408,8 @@
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.076" />
+                    app:layout_constraintVertical_bias="0.076"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <Button
                     android:id="@+id/button3"
@@ -398,7 +420,8 @@
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -420,7 +443,8 @@
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/poppins_semibold"/>
 
                 <TextView
                     android:id="@+id/textView4"
@@ -435,7 +459,8 @@
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView2"
-                    app:layout_constraintVertical_bias="0.076" />
+                    app:layout_constraintVertical_bias="0.076"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <Button
                     android:id="@+id/button3"
@@ -446,7 +471,8 @@
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
