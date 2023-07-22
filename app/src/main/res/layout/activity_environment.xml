@@ -94,7 +94,8 @@
                     android:layout_marginTop="10dp"
                     android:text="Significant light or noise disturbances"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox3"
@@ -103,7 +104,8 @@
                     android:layout_marginLeft="15dp"
                     android:text="Some light or noise, but not too disruptive"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox2"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox4"
@@ -114,7 +116,8 @@
                     android:text="Completely dark and quiet"
                     app:layout_constraintBottom_toTopOf="@+id/fb1"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox3"
+                    android:fontFamily="@font/abcd"/>
 
                 <TextView
                     android:id="@+id/fb1"
@@ -124,6 +127,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="A dark and quiet sleep environment helps promote melatonin production and supports undisturbed sleep, leading to better sleep quality."
                     android:textAlignment="center"
                     android:textSize="14sp"
@@ -131,7 +135,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/checkBox4"
-                    tools:visibility="gone" />
+                    tools:visibility="visible" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -150,7 +154,8 @@
                     android:layout_marginLeft="15dp"
                     android:text="Some clutter but manageable"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox8"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox8"
@@ -160,18 +165,20 @@
                     android:layout_marginTop="10dp"
                     android:text="Very cluttered and disorganized"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Tidy and organized"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/fb2"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox10" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox10"
+                    android:fontFamily="@font/abcd"/>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -184,7 +191,25 @@
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/fb2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="A tidy and clutter-free bedroom promotes a sense of calm and relaxation, reducing stress and anxiety before sleep."
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox11"
+                    tools:visibility="visible" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -203,7 +228,8 @@
                     android:layout_marginTop="10dp"
                     android:text="Infrequently, every few months or less"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox13"
@@ -212,18 +238,20 @@
                     android:layout_marginStart="15dp"
                     android:text="Occasionally, about once a month"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox12" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox12"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Regularly, at least once a week"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/fb3"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox13" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox13"
+                    android:fontFamily="@font/abcd"/>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -239,6 +267,24 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fb3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Keeping your sleep environment clean helps reduce allergens, bacteria, and dust mites, promoting a healthier sleep space."
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox14"
+                    tools:visibility="visible"
+                    android:fontFamily="@font/poppins_medium"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -257,7 +303,8 @@
                     android:layout_marginTop="10dp"
                     android:text="Regularly or always"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox16"
@@ -266,18 +313,20 @@
                     android:layout_marginStart="15dp"
                     android:text="Occasionally"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox15" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox15"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Rarely or never"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/fb4"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox16" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox16"
+                    android:fontFamily="@font/abcd"/>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -296,6 +345,24 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/fb4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Limiting screen time in bed is important as the blue light emitted from screens can disrupt melatonin production and interfere with the ability to fall asleep easily. "
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox14"
+                    tools:visibility="visible"
+                    android:fontFamily="@font/poppins_medium"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -312,7 +379,8 @@
                     android:layout_marginStart="15dp"
                     android:text="I use an air purifier or humidifier"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox18" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox18"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox18"
@@ -322,18 +390,20 @@
                     android:layout_marginTop="10dp"
                     android:text="I don't actively manage indoor air quality"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    android:fontFamily="@font/abcd"/>
 
                 <CheckBox
                     android:id="@+id/checkBox20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="15dp"
                     android:text="I regularly ventilate the room for fresh air"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/fb5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox19" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox19"
+                    android:fontFamily="@font/abcd"/>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -349,6 +419,24 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fb5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Proper indoor air quality can contribute to better respiratory health and overall comfort during sleep, supporting uninterrupted rest."
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBox14"
+                    tools:visibility="visible" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
