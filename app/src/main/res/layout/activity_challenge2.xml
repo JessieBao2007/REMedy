@@ -21,6 +21,13 @@
         app:layout_constraintTop_toTopOf="parent"
         android:fontFamily="@font/poppins_bold"/>
 
+    <TextView
+        android:id="@+id/testingtexts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hellotere"
+        android:textColor="@color/white"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -82,7 +89,7 @@
                     android:layout_marginBottom="19dp"
                     android:text="Drink 8-10 cups of water every day. Staying hydrated can improve overall health, balance sleep regulation hormones, and contribute to better sleep."
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/button3"
+                    app:layout_constraintBottom_toTopOf="@+id/waterbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +112,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/waterbtn"
                     android:layout_width="82dp"
                     android:layout_height="37dp"
                     android:layout_margin="10dp"
@@ -134,7 +141,7 @@
                     android:layout_marginBottom="19dp"
                     android:text="For a healthy bedtime from 9-11PM, stop consuming caffeine at around 2-4PM. Eliminating caffeine before bedtime can contribute to a more restful and deeper sleep."
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/button3"
+                    app:layout_constraintBottom_toTopOf="@+id/caffeinebtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
@@ -157,7 +164,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/caffeinebtn"
                     android:layout_width="82dp"
                     android:layout_height="37dp"
                     android:layout_margin="10dp"
@@ -199,7 +206,7 @@
                     android:layout_marginBottom="19dp"
                     android:text="Avoid electronics and screen time starting around 7-9 PM. The blue light emitted by these devices can interfere with the production of melatonin, a hormone that helps regulate the sleep-wake cycle."
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/button3"
+                    app:layout_constraintBottom_toTopOf="@+id/digitalbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
@@ -208,7 +215,7 @@
                     android:fontFamily="@font/poppins_medium"/>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/digitalbtn"
                     android:layout_width="82dp"
                     android:layout_height="37dp"
                     android:layout_margin="10dp"
@@ -250,7 +257,7 @@
                     android:layout_marginBottom="19dp"
                     android:text="Finish your last snack or meal by 8-9 PM. Eating a heavy meal or high-carb snacks close to bedtime can cause indigestion and spikes and drops in blood sugar levels, leading to wakefulness during the night"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/button3"
+                    app:layout_constraintBottom_toTopOf="@+id/snackbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
@@ -259,7 +266,7 @@
                     android:fontFamily="@font/poppins_medium"/>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/snackbtn"
                     android:layout_width="82dp"
                     android:layout_height="37dp"
                     android:layout_margin="10dp"
@@ -301,7 +308,7 @@
                     android:layout_marginBottom="19dp"
                     android:text="Organize your bedroom environment to promote relaxation and comfort. Use comfortable bedding, darken your room, minimize noise, and maintain a cool temperature for optimal sleep comfort."
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/button3"
+                    app:layout_constraintBottom_toTopOf="@+id/spacebtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
@@ -310,7 +317,7 @@
                     android:fontFamily="@font/poppins_medium"/>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/spacebtn"
                     android:layout_width="82dp"
                     android:layout_height="37dp"
                     android:layout_margin="10dp"
@@ -352,7 +359,7 @@
                     android:layout_marginBottom="19dp"
                     android:text="Take a sunset walk or exercise around 6-8PM. The natural light outdoors during sunset can help regulate the body's internal clock and signal to the brain that it's nearing bedtime. Moderate exercise can contribute to physical tiredness, making it easier for the body to fall asleep"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/button3"
+                    app:layout_constraintBottom_toTopOf="@+id/walkbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
@@ -361,7 +368,7 @@
                     android:fontFamily="@font/poppins_medium"/>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/walkbtn"
                     android:layout_width="82dp"
                     android:layout_height="37dp"
                     android:layout_margin="10dp"
@@ -403,7 +410,7 @@
                     android:layout_marginBottom="19dp"
                     android:text="Listen to an audiobook around 9:30PM. Not only do audiobooks help relax your mind and reduce stress, but they also encourage a more peaceful transition to sleep."
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/button3"
+                    app:layout_constraintBottom_toTopOf="@+id/audiobookbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
@@ -412,7 +419,7 @@
                     android:fontFamily="@font/poppins_medium"/>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/audiobookbtn"
                     android:layout_width="82dp"
                     android:layout_height="37dp"
                     android:layout_margin="10dp"
@@ -454,7 +461,7 @@
                     android:layout_marginBottom="19dp"
                     android:text="Jot down three things you are grateful for each night before sleep to foster a positive mindset and reduce anxious thoughts before sleeping."
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/button3"
+                    app:layout_constraintBottom_toTopOf="@+id/journalbtn"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.487"
                     app:layout_constraintStart_toStartOf="parent"
@@ -463,7 +470,7 @@
                     android:fontFamily="@font/poppins_medium"/>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/journalbtn"
                     android:layout_width="82dp"
                     android:layout_height="37dp"
                     android:layout_margin="10dp"
