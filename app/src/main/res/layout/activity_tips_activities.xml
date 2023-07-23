@@ -77,24 +77,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView"></AnalogClock>
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Schedule"
-            android:textSize="18dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
         <ScrollView
+            android:id="@+id/scrollView3"
             android:layout_width="436dp"
             android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8">
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,25 +98,91 @@
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="04:30 Low Body Temperature" />
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Morning (6:00 AM - 10:00 AM):" />
 
                 <TextView
                     android:id="@+id/textView9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="In order to stay warm and regulate your normal body temperature, make sure to exercise at this time!" />
+                    android:fontFamily="@font/abcd"
+                    android:text="Get Exposure to Natural Light: Spend time outdoors in the morning to get exposure to natural sunlight. Sunlight helps reset your internal clock and promotes wakefulness during the day." />
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="06:00 Cortisol Release" />
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Afternoon (12:00 PM - 2:00 PM):" />
 
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cortisol is a steriod hormone released by the adrenal gland that causes the liver to break down muscle and fat to produce sugar and helps the body respond to stress. High amounts of cortisol, especially without enough exercise in space may lead to weight gain, muscle weakness and more. Use this time to do something productive! Plan your tasks for the day, prepare for any research and get in some exercise to maintain your cortisol levels." />
+                    android:fontFamily="@font/abcd"
+                    android:text="Limit Caffeine Intake: Avoid consuming caffeinated beverages in the late afternoon to prevent interference with your ability to fall asleep later in the evening." />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Early Evening (5:00 PM - 7:00 PM):" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abcd"
+                    android:text="Engage in Physical Activity: Incorporate regular exercise into your early evening routine. Exercise can help improve sleep quality, but avoid intense workouts close to bedtime." />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Late Evening (8:00 PM - 10:00 PM):" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abcd"
+                    android:text="Establish a Relaxing Bedtime Routine: Create a calming bedtime routine, such as reading, listening to soothing music, or practicing relaxation techniques, to signal your body that it's time to wind down." />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Nighttime (10:00 PM - 6:00 AM):" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abcd"
+                    android:text="Limit Screen Time: Minimize exposure to electronic devices with bright screens, such as phones and computers, at least 1-2 hours before bedtime. Blue light from screens can disrupt melatonin production and hinder sleep" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Throughout the Day:" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abcd"
+                    android:text="Maintain a Consistent Sleep Schedule: Go to bed and wake up at the same time every day, even on weekends. Consistency helps regulate your internal clock and promotes better sleep." />
+
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
