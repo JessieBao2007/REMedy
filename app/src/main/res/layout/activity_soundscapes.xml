@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +7,15 @@
     android:background="@drawable/blue_btn_background"
     android:gravity="center"
     android:orientation="vertical">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_btn_background"
+    android:gravity="center"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -20,12 +27,15 @@
         android:text="Soundscapes"
         android:textAlignment="center"
         android:textColor="#34346E"
-        android:textSize="32sp" />
+        android:textSize="32sp"
+        android:fontFamily="@font/poppins_bold"/>
 
     <TextView
         android:id="@+id/textSubtitle1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -35,10 +45,13 @@
         android:text="Choose the sound that's right for you"
         android:textAlignment="center"
         android:textColor="#34346E"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"/>
 
     <TextView
         android:id="@+id/textSubtitle2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -50,7 +63,8 @@
         android:text="or mix and match to create your perfect blend"
         android:textAlignment="center"
         android:textColor="#34346E"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -60,7 +74,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="-60dp"
         android:onClick="play1"
-        android:text="play option1" />
+        android:text="play white noise"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -71,7 +87,10 @@
         android:layout_marginTop="-60dp"
         android:layout_marginEnd="50dp"
         android:onClick="stop1"
-        android:text="stop option1" />
+        android:text="stop white noise"
+
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -81,7 +100,10 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="0dp"
         android:onClick="play2"
-        android:text="play option2" />
+        android:text="play stream"
+
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -91,7 +113,9 @@
         android:layout_marginTop="0dp"
         android:layout_marginEnd="50dp"
         android:onClick="stop2"
-        android:text="stop option2" />
+        android:text="stop stream"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -101,7 +125,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="60dp"
         android:onClick="play3"
-        android:text="play option3" />
+        android:text="play bird noise"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -111,7 +137,9 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="50dp"
         android:onClick="stop3"
-        android:text="stop option3" />
+        android:text="stop bird noise"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -121,7 +149,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="120dp"
         android:onClick="play4"
-        android:text="play option4" />
+        android:text="play waves"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -131,7 +161,9 @@
         android:layout_marginTop="120dp"
         android:layout_marginEnd="50dp"
         android:onClick="stop4"
-        android:text="stop option4" />
+        android:text="stop waves"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -141,7 +173,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="180dp"
         android:onClick="play5"
-        android:text="play option5" />
+        android:text="play crackling"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -151,7 +185,9 @@
         android:layout_marginTop="180dp"
         android:layout_marginEnd="50dp"
         android:onClick="stop5"
-        android:text="stop option5" />
+        android:text="stop crackling"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -161,7 +197,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="240dp"
         android:onClick="play6"
-        android:text="play option6" />
+        android:text="play city noise"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -171,7 +209,9 @@
         android:layout_marginTop="240dp"
         android:layout_marginEnd="50dp"
         android:onClick="stop6"
-        android:text="stop option6" />
+        android:text="stop city noise"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -181,7 +221,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="300dp"
         android:onClick="play7"
-        android:text="play option7" />
+        android:text="play wind"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -191,7 +233,9 @@
         android:layout_marginTop="300dp"
         android:layout_marginEnd="50dp"
         android:onClick="stop7"
-        android:text="stop option7" />
+        android:text="stop wind"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -201,7 +245,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="360dp"
         android:onClick="play8"
-        android:text="play option8" />
+        android:text="play underwater"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="12dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -210,7 +256,35 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="360dp"
         android:layout_marginEnd="50dp"
+        android:fontFamily="@font/poppins_medium"
         android:onClick="stop8"
-        android:text="stop option8" />
+        android:text="stop underwater"
+        android:textSize="12dp" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/textSubtitle2"
+        android:layout_alignBottom="@+id/textSubtitle2"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="-104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColorHighlight="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

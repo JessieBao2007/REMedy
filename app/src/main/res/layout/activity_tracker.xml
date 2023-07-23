@@ -1,180 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/home_bottom_background"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/home_bottom_background"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#13173A"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Tracker"
+                android:textColor="#ffffff"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/home_bottom_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="1.0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Enter" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="350dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginBottom="0dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                    <LinearLayout
+                        android:id="@+id/DayTables"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:id="@+id/newTableLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/poppins_medium"></TableLayout>
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:text="Day vs. Hours Slept"
+                            android:textSize="20dp" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp">
+
+
+                        <com.github.mikephil.charting.charts.LineChart
+                            android:id="@+id/lineChart"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="15dp" />
+
+
+                    </RelativeLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:elevation="10dp">
+
+                        <TableLayout
+                            android:id="@+id/tableinput"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFFFF"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/userInpuths"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:fontFamily="@font/poppins_medium"
+                                android:hint="Enter Military Time of Sleep Start"
+                                android:padding="5dp" />
+
+                            <EditText
+                                android:id="@+id/userInputhe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:fontFamily="@font/poppins_medium"
+                                android:hint="Enter Military Time of Sleep End"
+                                android:padding="5dp" />
+
+                            <Button
+                                android:id="@+id/finalday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:fontFamily="@font/poppins_medium"
+                                android:padding="5dp"
+                                android:text="Done" />
+
+                        </TableLayout>
+
+                    </FrameLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="_____________________________________"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:background="#13173A"
-        android:orientation="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context=".MainActivity"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         >
 
-        <TextView
-            android:id="@+id/textView"
+        <Button
+            android:id="@+id/homeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="Tracker"
-            android:textColor="#ffffff"
-            android:textSize="28sp"
-            android:textStyle="bold"
+            android:text="Home"
+            android:textColorHighlight="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <RelativeLayout
-            android:id="@+id/constraintLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/home_bottom_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="1.0">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp">
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    android:text="Enter" />
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="false"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="350dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginBottom="0dp"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-
-                <LinearLayout
-                    android:id="@+id/DayTables"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TableLayout
-                        android:id="@+id/newTableLayout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"></TableLayout>
-
-
-                </LinearLayout>
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp">
-
-                <RelativeLayout
-                    android:layout_width="200dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="15dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerHorizontal="true"
-                        android:text="Day vs. Time Slept(Hours)" />
-                </RelativeLayout>
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="80dp"
-                    android:layout_marginEnd="15dp"
-                    android:layout_marginBottom="15dp">
-
-
-                    <com.github.mikephil.charting.charts.LineChart
-                        android:id="@+id/lineChart"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="15dp" />
-
-
-                </RelativeLayout>
-
-
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:elevation="10dp">
-
-                    <TableLayout
-                        android:id="@+id/tableinput"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:padding="5dp"
-                        android:visibility="gone">
-
-                        <EditText
-                            android:id="@+id/userInpuths"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#FFFFFF"
-                            android:hint="Enter Military Time of Sleep Start"
-                            android:padding="5dp" />
-
-                        <EditText
-                            android:id="@+id/userInputhe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#FFFFFF"
-                            android:hint="Enter Military Time of Sleep End"
-                            android:padding="5dp" />
-
-                        <Button
-                            android:id="@+id/finalday"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="#FFFFFF"
-                            android:padding="5dp"
-                            android:text="Done" />
-
-                    </TableLayout>
-
-                </FrameLayout>
-            </RelativeLayout>
-
-        </RelativeLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -2,6 +2,7 @@ package com.example.stemist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,17 +21,25 @@ public class challenge_activity2 extends AppCompatActivity {
      *
      */
 
-    public int score;
-    TextView displayscore;
-    Button water,caffeine,electro, snack, space, walk, journal, audiobook;
+    public static int score;
+    //TextView displayscore;
+    Button water,caffeine,electro, snack, space, walk, journal, audiobook, home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenge2);
 
+        home=(Button)findViewById(R.id.homeButton);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openHome();
+            }
+        });
 
-        displayscore=(TextView)findViewById(R.id.testingtexts);
+
+        //displayscore=(TextView)findViewById(R.id.testingtexts);
         water=(Button)findViewById(R.id.waterbtn);
         caffeine=(Button)findViewById(R.id.caffeinebtn);
         electro=(Button)findViewById(R.id.digitalbtn);
@@ -44,7 +53,7 @@ public class challenge_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 score+=5;
-                displayscore.setText(Integer.toString(score));
+             //   displayscore.setText(Integer.toString(score));
             }
         });
 
@@ -52,7 +61,7 @@ public class challenge_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 score+=8;
-                displayscore.setText(Integer.toString(score));
+               // displayscore.setText(Integer.toString(score));
             }
         });
 
@@ -60,7 +69,7 @@ public class challenge_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 score+=10;
-                displayscore.setText(Integer.toString(score));
+                //displayscore.setText(Integer.toString(score));
             }
         });
 
@@ -69,7 +78,7 @@ public class challenge_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 score+=5;
-                displayscore.setText(Integer.toString(score));
+                //displayscore.setText(Integer.toString(score));
             }
         });
 
@@ -77,7 +86,7 @@ public class challenge_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 score+=3;
-                displayscore.setText(Integer.toString(score));
+                //displayscore.setText(Integer.toString(score));
             }
         });
 
@@ -85,7 +94,7 @@ public class challenge_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 score+=10;
-                displayscore.setText(Integer.toString(score));
+                //displayscore.setText(Integer.toString(score));
             }
         });
 
@@ -93,7 +102,7 @@ public class challenge_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 score+=3;
-                displayscore.setText(Integer.toString(score));
+                //displayscore.setText(Integer.toString(score));
             }
         });
 
@@ -101,10 +110,18 @@ public class challenge_activity2 extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 score+=3;
-                displayscore.setText(Integer.toString(score));
+                //displayscore.setText(Integer.toString(score));
             }
         });
 
 
+    }
+
+    public void openHome(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+    public static int getScore(){
+        return score;
     }
 }

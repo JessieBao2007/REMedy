@@ -2,8 +2,10 @@ package com.example.stemist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -35,12 +37,22 @@ public class environment_activity extends AppCompatActivity {
     CheckBox Q5O2;
     CheckBox Q5O3;
 
-
+    Button home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_environment);
+
+        //home btn
+        home=(Button)findViewById(R.id.homeButton);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openHome();
+            }
+        });
+
 
         //Question 1
         Feedback1 = (TextView)findViewById(R.id.fb1);
@@ -260,5 +272,9 @@ public class environment_activity extends AppCompatActivity {
             }
         });
 
+    }
+    public void openHome(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

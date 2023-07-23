@@ -2,9 +2,11 @@ package com.example.stemist;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class soundscapes_activity extends AppCompatActivity {
     MediaPlayer player1;
@@ -16,10 +18,20 @@ public class soundscapes_activity extends AppCompatActivity {
     MediaPlayer player7;
     MediaPlayer player8;
 
+    Button home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soundscapes);
+
+        home=(Button)findViewById(R.id.homeButton);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openHome();
+            }
+        });
+
     }
     public void play1(View v) {
         if(player1 == null){
@@ -198,5 +210,10 @@ public class soundscapes_activity extends AppCompatActivity {
         stopPlayer6();
         stopPlayer7();
         stopPlayer8();
+    }
+
+    public void openHome(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

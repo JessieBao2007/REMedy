@@ -1,7 +1,10 @@
 package com.example.stemist;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +14,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.content.SharedPreferences;
+
 import android.graphics.Color;
 import android.os.Bundle;
 import com.github.mikephil.charting.charts.LineChart;
@@ -28,17 +33,19 @@ import java.util.Calendar;
 import android.os.Bundle;
 
 public class tracker_activity extends AppCompatActivity {
-    private Button button;
+    private Button button, home;
     private TableLayout tableLayout;
     private EditText userInputhoursstart;
     private EditText userInputhoursend;
     private LinearLayout DayTables;
     private Button daybutton;
-    private int DayCount = 1;
+    public static int DayCount = 0;
     int Hourscalc=0;
     private ArrayList<Entry> entries = new ArrayList<>();
     private LineChart lineChart;
 
+    public int min= 0;
+    public int totmin=0;
 
 
     @Override
@@ -47,7 +54,13 @@ public class tracker_activity extends AppCompatActivity {
         setContentView(R.layout.activity_tracker);
 
 
-
+        home=(Button)findViewById(R.id.homeButton);
+        home.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openHome();
+            }
+        });
 
 
         lineChart = findViewById(R.id.lineChart);
@@ -136,10 +149,11 @@ public class tracker_activity extends AppCompatActivity {
 
     //ADD NEW TABLE
     private void createNewTable() {
+        DayCount++;
         long hours = 0;
         long leftovermin = 0;
 
-        long min;
+        long totalDifference;
         try {
             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
             Date starting = sdf.parse(userInputhoursstart.getText().toString());
@@ -152,8 +166,9 @@ public class tracker_activity extends AppCompatActivity {
                 ending = calendar.getTime();
             }
 
-            long totalDifference = Math.abs(ending.getTime() - starting.getTime());
-            min = totalDifference / (60 * 1000);
+            totalDifference = Math.abs(ending.getTime() - starting.getTime());
+            min = (int) (totalDifference / (60 * 1000));
+            //totmin += (int) (totalDifference / (60 * 1000));
 
             hours = min / 60;
             leftovermin = min % 60;
@@ -164,12 +179,14 @@ public class tracker_activity extends AppCompatActivity {
             return;
         }
 
+
         TableLayout newTableLayout = new TableLayout(this);
         newTableLayout.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         ));
 
+        //day
         TableRow row1 = new TableRow(this);
         row1.setLayoutParams(new TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT,
@@ -182,10 +199,14 @@ public class tracker_activity extends AppCompatActivity {
                 TableRow.LayoutParams.MATCH_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT
         ));
+        dayText.setTextColor(Color.BLACK);
+        dayText.setTypeface(null, Typeface.BOLD);
         dayText.setHint("Day " + Integer.toString(DayCount));
         row1.addView(dayText);
         newTableLayout.addView(row1);
 
+
+        //start
         TableRow row2 = new TableRow(this);
         row2.setLayoutParams(new TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT,
@@ -197,10 +218,14 @@ public class tracker_activity extends AppCompatActivity {
                 TableRow.LayoutParams.MATCH_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT
         ));
+        startingTime.setTextColor(Color.BLACK);
+        startingTime.setTypeface(null, Typeface.BOLD);
         startingTime.setHint("Slept At: " + userInputhoursstart.getText().toString());
         row2.addView(startingTime);
         newTableLayout.addView(row2);
 
+
+        //end
         TableRow row3 = new TableRow(this);
         row3.setLayoutParams(new TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT,
@@ -212,11 +237,15 @@ public class tracker_activity extends AppCompatActivity {
                 TableRow.LayoutParams.MATCH_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT
         ));
+        endingTime.setTextColor(Color.BLACK);
+        endingTime.setTypeface(null, Typeface.BOLD);
         endingTime.setHint("Woke Up: " + userInputhoursend.getText().toString());
         row3.addView(endingTime);
         newTableLayout.addView(row3);
 
 
+
+        //total
         TableRow row4 = new TableRow(this);
         row4.setLayoutParams(new TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT,
@@ -228,11 +257,14 @@ public class tracker_activity extends AppCompatActivity {
                 TableRow.LayoutParams.MATCH_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT
         ));
+        editTime.setTextColor(Color.BLACK);
+        editTime.setTypeface(null, Typeface.BOLD);
         editTime.setHint(String.valueOf(hours) + " hours and " + String.valueOf(leftovermin) + " minutes");
         row4.addView(editTime);
         newTableLayout.addView(row4);
 
 
+        //deepsleep
         TableRow row5 = new TableRow(this);
         row5.setLayoutParams(new TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT,
@@ -245,14 +277,13 @@ public class tracker_activity extends AppCompatActivity {
                 TableRow.LayoutParams.WRAP_CONTENT
         ));
         double intValue = ((int) min) * 0.20;
-        calculatedamount.setHint("Deep Sleep Minutes: " +  String.valueOf(Math.round(intValue)));
+        calculatedamount.setTextColor(Color.BLACK);
+        calculatedamount.setTypeface(null, Typeface.BOLD);
+        calculatedamount.setHint("Deep Sleep Minutes: " + String.valueOf(Math.round(intValue)));
         row5.addView(calculatedamount);
         newTableLayout.addView(row5);
 
-
-
-
-
+//empty
         TableRow blank = new TableRow(this);
         blank.setLayoutParams(new TableRow.LayoutParams(
                 TableRow.LayoutParams.MATCH_PARENT,
@@ -270,11 +301,9 @@ public class tracker_activity extends AppCompatActivity {
         newTableLayout.addView(blank);
 
 
-
-
         DayTables.addView(newTableLayout);
-        DayCount++;
-        entries.add(new Entry(DayCount-1, hours));
+
+        entries.add(new Entry(DayCount, hours));
         LineDataSet dataSet = new LineDataSet(entries, "Minutes Slept");
 
         dataSet.setColor(Color.BLUE);
@@ -285,7 +314,21 @@ public class tracker_activity extends AppCompatActivity {
         lineChart.setData(lineData);
         lineChart.invalidate();
 
+        totmin += (int) (totalDifference / (60 * 1000));
+        SharedPreferences sharing = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharing.edit();
+        editor.putInt("MIN_VALUE", totmin);
+        editor.apply();
 
 
+    }
+
+    public void openHome(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public static int getDay(){
+        return DayCount;
     }
 }
