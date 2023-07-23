@@ -14,6 +14,7 @@ public class challenge_activity2 extends AppCompatActivity {
      * Walk: 10 points
      * Journal: 3 points
      * Audiobook: 3 points
+     *
      */
 
     @Override
